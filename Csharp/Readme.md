@@ -394,7 +394,7 @@ static void Main(string[] args)
             Console.WriteLine(book1.title);
             Console.WriteLine(book1.author);
 
-# Note: The public Book() method is called when we create the object of the book class 
+__Note: The public Book() method is called when we create the object of the book class__ 
 
 Book book 1 = new __Book()__ this the constructor method 
 
@@ -445,9 +445,9 @@ internal class Movie
         public string title;
         public string director;
         private string rating;  
-        <span style="color: green;"> 
-            *Ratings should only be G, PG, PG-13, R, NR
-            therefore the rating is private which will not allow other program to acces it*
+        <span style= "color: green;"> 
+            "Ratings should only be G, PG, PG-13, R, NR
+            therefore the rating is private which will not allow other program to acces it"
         </span>
 
         public Movie(string movieTitle, string movieDirector, string movieRating)
