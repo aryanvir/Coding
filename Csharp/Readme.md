@@ -11,7 +11,7 @@
 
 # Comment 
 
- //  - is used for commenting single lines 
+// - is used for commenting single lines 
 
 /* */* - is used for comenting multipule lines 
 
@@ -36,9 +36,8 @@ int [] (variable name) = {(value 1), (value 2 ),.... };
 
 __Used to create empty array__
 
-``` csharp 
 string [] (variable name) = new string[(no. of elements it will hold )] ;
-```
+
 
 
 
@@ -48,15 +47,16 @@ string [] (variable name) = new string[(no. of elements it will hold )] ;
 
 __Syntax__
 
+```csharp
 int[,] (variable name) = {{1,2,3},{4,5,6}};
-
+```
 __Used to create empty 2D array__
 
+```csharp
 string [] (variable name) = new string[(no. of elements it will hold ), (number of elements the array inside of it will hold)] ; 
-
+```
 
 __Example__
-
 ```csharp
 int[,] numberGird = 
             {
@@ -67,7 +67,7 @@ int[,] numberGird =
 
             };
             Console.WriteLine(numberGird[0,0]);
-````
+```
 # Functional operator (and , or )
 
 >> && = and in C#
@@ -78,20 +78,22 @@ int[,] numberGird =
 # Switch Statements 
 
 __Syntax__ :
-
 ```csharp
+
+
 switch(variableBeingSwitched)
 {
     case senario:
         outputvariable = switchedvalue;
-        break; // optional if you want to break out after switching 
+        break; *optional if you want to break out after switching*
     case ...
         out..
     default senario:
         outputvariable = defaultvalue;
 }
 ```
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+******************************************************************************************************************************
 
 __Example:__
 ```csharp
@@ -135,11 +137,13 @@ static void Main(string[] args)
             }
 ```
 
-# ####################################################################################################################################################################################################
+******************************************************************************************************************************
 
 #  Conditional Statements (if , else , else if)
 
 __Syntax__:
+```csharp
+
 
 if (Condition)
 {
@@ -154,7 +158,8 @@ else if (Condition)
     Code to be executed
 }
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+```
+******************************************************************************************************************************
 
 __Example:__
 
@@ -179,16 +184,20 @@ static void Main(string[] args)
                 Console.WriteLine("You are not male and not tall");
             }
 ```
-# ####################################################################################################################################################################################################
+******************************************************************************************************************************
 
 
 # Methods or Functions 
 
+
 __Syntax__:
+```csharp 
 static void nameOfTheMethod(Parameter)
 {
     Action code ... 
 }
+
+```
 
 __Example :__
 
@@ -226,13 +235,13 @@ static void Main(string[] args)
 
 __Syntax__
 
+```csharp 
+
 while (condition)
 {
-    code to be executed;
+    // code to be executed;
 }
-
-
-
+```
 __Example__
 ```csharp
 static void Main(string[] args)
@@ -256,12 +265,17 @@ do
 
 # For Loop
 
-__Syntax__ 
+__Syntax__
 
-for(Declare variable ; Condition ; Code to be excuted)
+```csharp 
+
+for(/*Declare variable ; Condition ; Code to be excuted*/)
 {
-    Code which needs to be excuted 
+    // Code which needs to be excuted 
 }
+
+``` 
+
 
 __Example__
 ```csharp
@@ -280,6 +294,7 @@ static void Main(string[] args)
 
 __Syntax__
 
+```csharp 
 try
 {
     Code you want to run
@@ -288,6 +303,8 @@ catch(Exception e)
 {
     Error message
 }
+
+```
 
 __Example__
 
@@ -316,9 +333,15 @@ static void Main(string[] args)
 
 and the syntax for that is 
 
-finally{
-    code...
+```csharp 
+
+finally
+{
+    // code...
 }
+
+```
+
 
 
 
@@ -331,9 +354,11 @@ __Syntax__
 
 *Create a file in a new cs file with class template or add this bellow the code*
 
+```csharp 
+
 internal class ClassName
     {
-        Attributes..  
+        //Attributes..  
     }
 
 static void Main(string[] args)
@@ -346,6 +371,9 @@ static void Main(string[] args)
             Console.WriteLine(book1.Attribute1);
             Console.WriteLine(book1.Attribute2);
         }
+
+```
+
 
 __Example__
 ```csharp
@@ -376,10 +404,13 @@ a function which is executed as the instance of the class is made , like the def
 
 __Syntax__
 
-public ClassName(Parameters the method takes in)
-{
+```csharp 
 
+public ClassName(Parameters the method takes in)
+{ 
+    // code 
 }
+```
 
 __Example__
 
