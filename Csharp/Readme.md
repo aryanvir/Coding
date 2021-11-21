@@ -11,7 +11,7 @@
 
 # Comment 
 
-``` csharp // ``` - is used for commenting single lines 
+ //  - is used for commenting single lines 
 
 /* */* - is used for comenting multipule lines 
 
@@ -36,8 +36,9 @@ int [] (variable name) = {(value 1), (value 2 ),.... };
 
 __Used to create empty array__
 
+``` csharp 
 string [] (variable name) = new string[(no. of elements it will hold )] ;
-
+```
 
 
 
@@ -83,7 +84,7 @@ switch(variableBeingSwitched)
 {
     case senario:
         outputvariable = switchedvalue;
-        break; *optional if you want to break out after switching*
+        break; // optional if you want to break out after switching 
     case ...
         out..
     default senario:
