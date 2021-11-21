@@ -11,7 +11,7 @@
 
 # Comment 
 
-// - is used for commenting single lines 
+``` csharp // ``` - is used for commenting single lines 
 
 /* */* - is used for comenting multipule lines 
 
@@ -56,6 +56,7 @@ string [] (variable name) = new string[(no. of elements it will hold ), (number 
 
 __Example__
 
+```csharp
 int[,] numberGird = 
             {
                 {1, 2, 3, },
@@ -65,7 +66,7 @@ int[,] numberGird =
 
             };
             Console.WriteLine(numberGird[0,0]);
-
+````
 # Functional operator (and , or )
 
 >> && = and in C#
@@ -77,6 +78,7 @@ int[,] numberGird =
 
 __Syntax__ :
 
+```csharp
 switch(variableBeingSwitched)
 {
     case senario:
@@ -87,7 +89,7 @@ switch(variableBeingSwitched)
     default senario:
         outputvariable = defaultvalue;
 }
-
+```
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 __Example:__
