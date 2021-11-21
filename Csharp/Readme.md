@@ -1,9 +1,9 @@
-# 												                   Cshrap - C#  Notes                                                            
+#                                                                  Cshrap - C#  Notes                                                            
 
 # Data Types 
 
-1. Strings - strings
-2. Integers - int
+1. Strings -  strings 
+2. Integers -  int 
 3. Decimal - float , double , decimal 
 4. Boolean - bool (True , False)
 5. Charecter - char 
@@ -30,7 +30,9 @@
 
 __Syntax__ 
 
+```csharp 
 int [] (variable name) = {(value 1), (value 2 ),.... };
+```
 
 __Used to create empty array__
 
@@ -77,19 +79,19 @@ __Syntax__ :
 
 switch(variableBeingSwitched)
 {
-	case senario:
-		outputvariable = switchedvalue;
-		break; *optional if you want to break out after switching*
-	case ...
-		out..
-	default senario:
-		outputvariable = defaultvalue;
+    case senario:
+        outputvariable = switchedvalue;
+        break; *optional if you want to break out after switching*
+    case ...
+        out..
+    default senario:
+        outputvariable = defaultvalue;
 }
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 __Example:__
-
+```csharp
 static void Main(string[] args)
         {
             Console.Write(" Enter Day Number :");
@@ -128,7 +130,7 @@ static void Main(string[] args)
                     dayName = "Invalid Day Number";
                     break;
             }
-
+```
 
 # ####################################################################################################################################################################################################
 
@@ -142,17 +144,18 @@ if (Condition)
 }
 else
 {
-	Code to be executed 
+    Code to be executed 
 }
 else if (Condition)
 {
-	Code to be executed
+    Code to be executed
 }
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 __Example:__
 
+```csharp
 static void Main(string[] args)
         {
             bool isMale = true;
@@ -172,6 +175,7 @@ static void Main(string[] args)
             {
                 Console.WriteLine("You are not male and not tall");
             }
+```
 # ####################################################################################################################################################################################################
 
 
@@ -180,35 +184,38 @@ static void Main(string[] args)
 __Syntax__:
 static void nameOfTheMethod(Parameter)
 {
-	Action code ... 
+    Action code ... 
 }
 
 __Example :__
 
-static void Main(string[] args) main function/method like the python init function
-	{
-	    SayHi("Aryan",14); 
-	}
-	static void SayHi(string name , int age)
-	{
-	    Console.WriteLine($"Hello {name} you are {age}");
-	}
+```csharp
+static void Main(string[] args) // main function/method like the python init function
+    {
+        SayHi("Aryan",14); 
+    }
+    static void SayHi(string name , int age)
+    {
+        Console.WriteLine($"Hello {name} you are {age}");
+    }
 
+```
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 __Exaple 2 with Return statement :__
 
+```csharp
 static void Main(string[] args)
-	{
-	Console.WriteLine(Cube(5));
-	  
-	}
-	static int Cube(int number)
-	{
-	int result = number * number * number;
-	__return__ result; 
-	}
-
+    {
+    Console.WriteLine(Cube(5));
+      
+    }
+    static int Cube(int number)
+    {
+    int result = number * number * number;
+    __return__ result; 
+    }
+```
 # ####################################################################################################################################################################################################
 
 
@@ -224,7 +231,7 @@ while (condition)
 
 
 __Example__
-
+```csharp
 static void Main(string[] args)
         {
             int index = 1;
@@ -235,7 +242,7 @@ static void Main(string[] args)
             }
 
         }
-
+```
 # Do while loop 
 
 do
@@ -254,6 +261,7 @@ for(Declare variable ; Condition ; Code to be excuted)
 }
 
 __Example__
+```csharp
 static void Main(string[] args)
         {
             for(int i = 1; i <= 10; i++)
@@ -261,7 +269,7 @@ static void Main(string[] args)
                 Console.WriteLine(i);
             }                    
         }
-
+```
 
 # ###############################################################################################################################################################################
 
@@ -280,6 +288,7 @@ catch(Exception e)
 
 __Example__
 
+```csharp
 static void Main(string[] args)
         {
             try
@@ -299,7 +308,8 @@ static void Main(string[] args)
          
         }
 
-__Note : There is a _finally_ keyword which allows user to execute code no matter what the execption__
+```
+# Note : There is a _finally_ keyword which allows user to execute code no matter what the execption 
 
 and the syntax for that is 
 
@@ -335,7 +345,7 @@ static void Main(string[] args)
         }
 
 __Example__
-
+```csharp
 internal class Book
     {
         public string title;
@@ -354,7 +364,7 @@ static void Main(string[] args)
             Console.WriteLine(book1.title);
             Console.WriteLine(book1.author);
         }
-
+```
 # Constructors 
 
 
@@ -371,6 +381,7 @@ public ClassName(Parameters the method takes in)
 __Example__
 
 *Class file*
+```csharp
 
 internal class Book
     {
@@ -385,19 +396,18 @@ internal class Book
             pages = aPages;
         }
 
+```
 *Program file*
-
 ```csharp
-
 static void Main(string[] args)
         {
             Book book1 = new Book("Harry Potter","JK Rowling",400);
             
             Console.WriteLine(book1.title);
             Console.WriteLine(book1.author);
-	    
+
 ```
-__Note: The public Book() method is called when we create the object of the book class__ 
+# Note: The public Book() method is called when we create the object of the book class 
 
 Book book 1 = new __Book()__ this the constructor method 
 
@@ -412,6 +422,7 @@ __Syntax__ is the same as any function or method in Csharp
 
 __Example__
 
+```csharp
 internal class Student
     {
         public string name;
@@ -425,8 +436,11 @@ internal class Student
             gpa = studentGpa;
 
         }
-
+```
 __Is a object method__
+
+```csharp
+
         public bool hasHonors()  
         {
             if(gpa >= 3.5)
@@ -436,21 +450,23 @@ __Is a object method__
             return false;
         }
 
-
+```
 # Getters and Setters
 
 Now we use getter and setter to make our class and code more secure and safe . These are used when we dont a value of a parameter apart from the fixed values for example a movie rating can only be a fixed few not anything therefore we will use getters and setters here.
 
 __Example__
 
+```csharp
+
 internal class Movie
     {
         public string title;
         public string director;
         private string rating;  
-        <span style= "color: green;"> 
-            "Ratings should only be G, PG, PG-13, R, NR
-            therefore the rating is private which will not allow other program to acces it"
+        <span style="color: green;"> 
+            *Ratings should only be G, PG, PG-13, R, NR
+            therefore the rating is private which will not allow other program to acces it*
         </span>
 
         public Movie(string movieTitle, string movieDirector, string movieRating)
@@ -478,6 +494,6 @@ internal class Movie
     }
 
 
+```
 
-
-# 			               	End Of Notes 																				   #
+#                           End Of Notes                                                                                   #
