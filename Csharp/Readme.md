@@ -299,7 +299,7 @@ static void Main(string[] args)
          
         }
 
-# Note : There is a _finally_ keyword which allows user to execute code no matter what the execption 
+__Note : There is a _finally_ keyword which allows user to execute code no matter what the execption__
 
 and the syntax for that is 
 
