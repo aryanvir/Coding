@@ -387,13 +387,16 @@ internal class Book
 
 *Program file*
 
+```csharp
+
 static void Main(string[] args)
         {
             Book book1 = new Book("Harry Potter","JK Rowling",400);
             
             Console.WriteLine(book1.title);
             Console.WriteLine(book1.author);
-
+	    
+```
 __Note: The public Book() method is called when we create the object of the book class__ 
 
 Book book 1 = new __Book()__ this the constructor method 
