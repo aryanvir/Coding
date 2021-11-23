@@ -1,4 +1,4 @@
-#                                                                  Cshrap - C#  Notes                                                            
+#             Cshrap - C#  Notes                                                            
 
 # Data Types 
 
@@ -332,7 +332,7 @@ static void Main(string[] args)
         }
 
 ```
-__Note : There is a _finally_ keyword which allows user to execute code no matter what the execption 
+__Note : There is a _finally_ keyword which allows user to execute code no matter what the execption__
 
 and the syntax for that is 
 
@@ -537,5 +537,229 @@ internal class Movie
 ******************************************************************************************************************************
 
 
+# Static Class Attributes
+
+
+Attributes specific to the class not to the object of the class 
+
+
+__Syntax__
+
+```csharp
+public static datatype variablename;
+``` 
+
+__Example__
+
+Main Script
+```csharp 
+static void Main(string[] args)
+        {
+            Console.WriteLine(Song.songCount);
+            Song holiday = new Song("Holiday", "KSI", 200);
+            Console.WriteLine(Song.songCount);
+            Song lemonade = new Song("lemonade","don tonliver", 200);
+            Console.WriteLine(Song.songCount); 
+            
+        }
+```
+
+Class Script 
+
+```csharp
+internal class Song
+    {
+        public string title;
+        public string artist;
+        public int duration; // An attrubute to the object of the class 
+        public static int songCount = 0; // An atribute to the class 
+
+        public Song(string songTitle,string songArtist, int songDuration)
+        {
+            title = songTitle;
+            artist = songArtist;
+            duration = songDuration;
+            songCount++;
+
+        }
+```
+
+******************************************************************************************************************************
+
+# Static methods and classes 
+
+Methods and classes which can be called directly on the class without creating instances 
+
+__Syntax__
+
+```csharp
+static class Class_name // static class 
+{
+
+    public static void Method_name(string name) // static method 
+    {
+        // Code.. 
+    }
+        
+    
+}
+
+```
+
+__Example__
+
+
+Class Script
+```csharp 
+static class UsefulTools
+    {
+        public static void SayHi(string name)
+        {
+            Console.WriteLine("Hello" + name);
+        }
+        
+    }
+
+```
+
+<h2>This class cannot be used to create instances as the stctic key word is used which makes the class static 
+</h2>
+
+
+
+Main Script 
+```csharp
+ class Program
+    {
+        static void Main(string[] args)
+        {
+            UsefulTools.SayHi("Aryan");
+
+        }
+
+    }
+```
+******************************************************************************************************************************
+
+# Inheritance 
+
+Inheritance is a way in Csharp were a class can inherit another classes's attributes and methods 
+
+__Syntax__
+
+Super class Script 
+
+```csharp
+
+class SupperClass 
+{
+    public void Method1()
+    {
+        // code ...
+    }
+
+    public void Method2()
+    {
+        // Code ...
+
+    }
+    public virtual void SpecialMethod() // The virtual key allows us to overide this method 
+    {
+        // Code ...
+    }
+
+}
+
+```
+Sub Class Script
+
+```csharp
+
+class SubClass : SupperClass // this means that the SubClass will inherit SupperClass's methods and attributes 
+    {
+       public void SubClassMethod1()
+        {
+            // Code ... 
+
+        }
+        public override void SpecialMethod() /// The overide key word allows us to overide an inherited class 
+        {
+            // Code ...
+        }
+    }
+
+```
+
+__Example__
+
+Suppose we have a chef and an italian chef , now the italian chef can all the things the chef can but he can make few more this 
+
+
+
+Chef class Script
+```Csharp
+
+internal class Chef
+    {
+        public void MakeChiken()
+        {
+            Console.WriteLine("The Chef made chicken ");
+
+        }
+
+        public void MakeSalad()
+        {
+            Console.WriteLine("The chef makes salad");
+        }
+
+        public virtual void MakespecialDish()
+        {
+            Console.WriteLine("The chef made BBQ Spicy Chicken ");
+        }
+
+    }
+
+```
+
+Italian Chef Script 
+```csharp
+
+class ItalianChef : Chef
+    {
+       public void MakePasta()
+        {
+            Console.WriteLine("Made Pasta");
+
+        }
+        public override void MakespecialDish()
+        {
+            Console.WriteLine("The chef made chicken parm ");
+        }
+    }
+
+```
+Main Program
+```csharp 
+
+class Program
+    {
+        static void Main(string[] args)
+        {
+           Chef chef = new Chef();
+           chef.MakeChiken();
+           ItalianChef italianChef = new ItalianChef();
+            italianChef.MakeChiken();
+            italianChef.MakePasta();
+            italianChef.MakespecialDish();
+
+
+        }
+
+    }
+
+
+```
+
+******************************************************************************************************************************
 
 #                           End Of Notes                                                                                   #
